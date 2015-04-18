@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="ISO-8859-1">
+			<title>Trace</title>
+	<link rel='stylesheet' type='text/css' href='UI.css' />
+	
+	<script type="text/javascript">
+		function validate()
+		{
+				if(document.trace.tnum.value.length !== 6)
+				{
+					alert("Tracking number must not be less than 6!");
+					return false;
+				}
+				
+				else if(document.trace.tnum.value == "")
+				{
+					alert("Form must not be emtpy!");
+					return false;
+				}
+		}
+	</script>
+	
+	</head>
+
+		<body>
+		<div id ='head'>
+			<div id='name'>
+			   <a href = "index.html"><img src = "logo-packages.png"></a>
+         	   <h1><b>PACKAGE</b></h1>
+			   <h1><b>A</b></h1>
+			   <h1><b>L</b></h1><br/>
+					<div id = 'banner'>
+						<hp>Special Handling.</hp>
+						<hp>Extra Service</hp>
+					</div>
+			
+			
+			<div id='pack'>
+                        <a href="Trace.html"><button id = "left">Trace a Shipment</button></a>
+                        <a href="Create.html"><button>Create a Shipment</button></a>
+                        <a href="Claim.html"><button id ="right">Claim</button></a>
+			</div>
+		</div>
+		</div>
+		<div id = 'body'>
+        <p>To locate and trace a sent package</p>
+		<form id = "trace">
+		<p>Enter tracking number: </p><input type = "text" name ="tnum" ">
+		</form>
+		<a href = "Info.html"><input type = "button" value = "submit" onclick = "return validate()"></a>
+		</form>
+		</div>
+	</body>
+</html>
